@@ -1,0 +1,12 @@
+:root{
+  --calculator-color: #cacaca;
+}
+
+/* https://scrapbook.hackclub.com/themes/default.css */
+
+#calculator{
+  width: 50%;
+  height: 100%;
+  margin: 10vh;
+  background-color: var(--calculator-color);
+}
