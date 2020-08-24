@@ -39,7 +39,7 @@ html, body{
   position: relative;
   background-color: var(--screen-color);
   border-radius: 3vw/3vh;
-  height: 20vh;
+  min-height: 7em;
   text-align: right;
   margin: 2vh;
 }
