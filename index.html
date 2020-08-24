@@ -19,99 +19,232 @@
   <link rel="stylesheet" href="./style.css">
 
   <meta name="theme-color" content="#fafafa">
-  
+
   <script src='https://analytics.stacc.cc/api/script/csAaUCTlvRej'></script>
 </head>
 
 <body>
 
   <div class="calculator">
+
     <h1 style="text-align:center;">calcucumber</h1>
+
     <div class="display">
       <div class="result">
         hewwo
       </div>
     </div>
+
     <table class="top">
 
       <tr class="controlButtons">
-        <td id="shift">SHIFT</td>
-        <td id="alpha">ALPHA</td>
+        <td> <span id="shift">SHIFT</span> </td>
+        <td> <span id="alpha">ALPHA</span> </td>
 
         <td colspan="2" rowspan="2">
-          <b>
-            <span id="up">ᴧ</span><br>
-            <span id="left"><&nbsp;&nbsp;&nbsp;</span>
-            <span id="right">&nbsp;&nbsp;&nbsp;></span><br>
-            <span id="down">v</span>
-          </b>
+          
+            <span id="up" class="directions">ᴧ</span><br>
+            <span id="left" class="directions"><&nbsp;&nbsp;&nbsp;</span>
+            <span id="right" class="directions">&nbsp;&nbsp;&nbsp;></span><br>
+            <span id="down" class="directions">v</span>
+          
         </td>
 
-        <td id="mode">MODE</td>
-        <td id="power">PWR</td>
+        <td> 
+          <span class="unshifted" id="mode">MODE</span> 
+          <span class="shifted" id="">CLR</span> 
+        </td>
+
+        <td> 
+          <span id="power">PWR</span> 
+        </td>
+
       </tr>
       <tr class="topButtons">
-        <td id="calc">CALC</td>
-        <td id="integral">ʃdx</td>
-        <td id="inverse">x<sup>-1</sup></td>
-        <td id="constants">CONST</td>
+        <td> 
+          <span class="unshifted" id="calc">CALC</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="integral">ʃdx</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="inverse">x<sup>-1</sup></span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="constants">CONST</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
       <tr class="topButtons">
-        <td id="fraction">a b/c</td>
-        <td id="square_root">√</td>
-        <td id="squared">x<sup>2</sup></td>
-        <td id="exponent">^</td>
-        <td id="log">log</td>
-        <td id="ln">ln</td>
+        <td> 
+          <span class="unshifted" id="fraction">a b/c</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="square_root">√</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="squared">x<sup>2</sup></span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="exponent">^</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="log">log</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="ln">ln</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
       <tr class="topButtons">
-        <td id="negate">(-)</td>
-        <td id="sexagesimal">° ' "</td>
-        <td id="hyp">hyp</td>
-        <td id="sin">sin</td>
-        <td id="cos">cos</td>
-        <td id="tan">tan</td>
+        <td> 
+          <span id="negate">(-)</span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="sexagesimal">° ' "</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span id="hyp">hyp</span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="sin">sin</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="cos">cos</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="tan">tan</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
       <tr class="topButtons">
-        <td id="recall">RCL</td>
-        <td id="eng">ENG</td>
-        <td id="bracket_L">(</td>
-        <td id="bracket_R">)</td>
-        <td id="comma">,</td>
-        <td id="m_plus">M+</td>
+        <td> 
+          <span class="unshifted" id="recall">RCL</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="eng">ENG</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span id="bracket_L">(</span> 
+        </td>
+        <td> 
+          <span id="bracket_R">)</span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="comma">,</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="m_plus">M+</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
-    </table>
+
+    </table> <!-- end of top table -->
 
     <table class="bottom">
       <tr class="btmButtons">
-        <td id="7">7</td>
-        <td id="8">8</td>
-        <td id="9">9</td>
-        <td id="delete">DEL</td>
-        <td id="allclear">AC</td>
+        <td> 
+          <span class="unshifted" id="7">7</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="8">8</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="9">9</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td id="delete">
+          <span class="unshifted" id="delete">DEL</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td id="allclear">
+          <span class="unshifted" id="allclear">AC</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
       <tr class="btmButtons">
-        <td id="4">4</td>
-        <td id="5">5</td>
-        <td id="6">6</td>
-        <td id="times">X</td>
-        <td id="divide">/</td>
+        <td> 
+          <span class="unshifted" id="4">4</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="5">5</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="6">6</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="times">X</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="divide">/</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
       <tr class="btmButtons">
-        <td id="1">1</td>
-        <td id="2">2</td>
-        <td id="3">3</td>
-        <td id="plus">+</td>
-        <td id="minus">-</td>
+        <td> 
+          <span class="unshifted" id="1">1</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="2">2</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="3">3</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="plus">+</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="minus">-</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
       <tr class="btmButtons">
-        <td id="0">0</td>
-        <td id="decimal">.</td>
-        <td id="EXP">EXP</td>
-        <td id="ans">ANS</td>
-        <td id="equals">=</td>
+        <td> 
+          <span class="unshifted" id="0">0</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="decimal">.</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="EXP">EXP</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="ans">ANS</span> 
+          <span class="shifted" id=""></span> 
+        </td>
+        <td> 
+          <span class="unshifted" id="equals">=</span> 
+          <span class="shifted" id=""></span> 
+        </td>
       </tr>
-    </table>
+    </table> <!-- end of bottom table -->
 
   </div>
 

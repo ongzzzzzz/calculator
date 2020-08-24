@@ -65,6 +65,16 @@ table td{
   box-shadow: 0vh 0.5vh gray;
 }
 
+table td:active{
+  box-shadow: none;
+  transform: translateY(0.5vh);
+}
+
+table td span::selection, sup::selection{
+  color: none;
+  background-color: none;
+}
+
 .top td{
   color: var(--font-color);
   
@@ -102,6 +112,14 @@ table td{
   color: var(--alpha-color);
 }
 
+.directions{
+  font-weight: bolder;
+}
+
 #delete, #allclear{
   background-color: var(--clear-button-color);
+}
+
+.shifted{
+  display: none;
 }
