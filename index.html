@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#fafafa">
 
   <script src='https://analytics.stacc.cc/api/script/csAaUCTlvRej'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
 </head>
 
@@ -41,21 +41,25 @@
     <table class="top">
 
       <tr class="controlButtons">
-        <td> <span id="shift">SHIFT</span> </td>
+        <td> <span id="shift" onmouseup="shiftButtons()">SHIFT</span> </td>
         <td> <span id="alpha">ALPHA</span> </td>
 
         <td colspan="2" rowspan="2">
           
-            <span id="up" class="directions">▲</span><br>
-            <span id="left" class="directions">◀&nbsp;&nbsp;&nbsp;</span>
-            <span id="right" class="directions">&nbsp;&nbsp;&nbsp;▶</span><br>
-            <span id="down" class="directions">▼</span>
+          <span id="up" class="button directions">
+            ▲</span><br>
+          <span id="left" class="button directions">
+            ◀&nbsp;&nbsp;&nbsp;</span>
+          <span id="right" class="button directions">
+            &nbsp;&nbsp;&nbsp;▶</span><br>
+          <span id="down" class="button directions">
+            ▼</span>
           
         </td>
 
         <td> 
-          <span class="unshifted" id="mode">MODE</span> 
-          <span class="shifted" id="clear">CLR</span> 
+          <span class="button unshifted" id="mode">MODE</span> 
+          <span class="button shifted" id="clear">CLR</span> 
         </td>
 
         <td> 
@@ -65,46 +69,46 @@
       </tr>
       <tr class="topButtons">
         <td> 
-          <span class="unshifted" id="calc">CALC</span> 
-          <span class="shifted" id="solve">SOLVE</span> 
+          <span class="button unshifted" id="calc">CALC</span> 
+          <span class="button shifted" id="solve">SOLVE</span> 
         </td>
         <td> 
-          <span class="unshifted" id="integral">ʃ dx</span> 
-          <span class="shifted" id="derivative">d/dx</span> 
+          <span class="button unshifted" id="integral">ʃ dx</span> 
+          <span class="button shifted" id="derivative">d/dx</span> 
         </td>
         <td> 
-          <span class="unshifted" id="inverse">x<sup>-1</sup></span> 
-          <span class="shifted" id="factorial">x<i>!</i></span> 
+          <span class="button unshifted" id="inverse">x<sup>-1</sup></span> 
+          <span class="button shifted" id="factorial">x<i>!</i></span> 
         </td>
         <td> 
-          <span class="unshifted" id="constants">CONST</span> 
-          <span class="shifted" id="conversion">CONV</span> 
+          <span class="button unshifted" id="constants">CONST</span> 
+          <span class="button shifted" id="conversion">CONV</span> 
         </td>
       </tr>
       <tr class="topButtons">
         <td> 
-          <span class="unshifted" id="mixed_fraction">a b/c</span> 
-          <span class="shifted" id="fraction">d/c</span> 
+          <span class="button unshifted" id="mixed_fraction">a b/c</span> 
+          <span class="button shifted" id="fraction">d/c</span> 
         </td>
         <td> 
-          <span class="unshifted" id="square_root">√</span> 
-          <span class="shifted" id="cube_root"><sup>3</sup>√</span> 
+          <span class="button unshifted" id="square_root">√</span> 
+          <span class="button shifted" id="cube_root"><sup>3</sup>√</span> 
         </td>
         <td> 
-          <span class="unshifted" id="squared">x<sup>2</sup></span> 
-          <span class="shifted" id="cubed">x<sup>3</sup></span> 
+          <span class="button unshifted" id="squared">x<sup>2</sup></span> 
+          <span class="button shifted" id="cubed">x<sup>3</sup></span> 
         </td>
         <td> 
-          <span class="unshifted" id="nth_power">^</span> 
-          <span class="shifted" id="nth_root"><sup>x</sup>√</span> 
+          <span class="button unshifted" id="nth_power">^</span> 
+          <span class="button shifted" id="nth_root"><sup>x</sup>√</span> 
         </td>
         <td> 
-          <span class="unshifted" id="log">log</span> 
-          <span class="shifted" id="base_10">10<sup>x</sup></span> 
+          <span class="button unshifted" id="log">log</span> 
+          <span class="button shifted" id="base_10">10<sup>x</sup></span> 
         </td>
         <td> 
-          <span class="unshifted" id="ln">ln</span> 
-          <span class="shifted" id="base_e">e<sup>x</sup></span> 
+          <span class="button unshifted" id="ln">ln</span> 
+          <span class="button shifted" id="base_e">e<sup>x</sup></span> 
         </td>
       </tr>
       <tr class="topButtons">
@@ -118,26 +122,26 @@
           <span id="hyp">hyp</span> 
         </td>
         <td> 
-          <span class="unshifted" id="sin">sin</span> 
-          <span class="shifted" id="inv_sin">sin<sup>-1</sup></span> 
+          <span class="button unshifted" id="sin">sin</span> 
+          <span class="button shifted" id="inv_sin">sin<sup>-1</sup></span> 
         </td>
         <td> 
-          <span class="unshifted" id="cos">cos</span> 
-          <span class="shifted" id="inv_cos">cos<sup>-1</sup></span> 
+          <span class="button unshifted" id="cos">cos</span> 
+          <span class="button shifted" id="inv_cos">cos<sup>-1</sup></span> 
         </td>
         <td> 
-          <span class="unshifted" id="tan">tan</span> 
-          <span class="shifted" id="inv_tan">tan<sup>-1</sup></span> 
+          <span class="button unshifted" id="tan">tan</span> 
+          <span class="button shifted" id="inv_tan">tan<sup>-1</sup></span> 
         </td>
       </tr>
       <tr class="topButtons">
         <td> 
-          <span class="unshifted" id="recall">RCL</span> 
-          <span class="shifted" id="store">STO</span> 
+          <span class="button unshifted" id="recall">RCL</span> 
+          <span class="button shifted" id="store">STO</span> 
         </td>
         <td> 
-          <span class="unshifted" id="eng">ENG</span> 
-          <span class="shifted" id="shift_eng">←</span> 
+          <span class="button unshifted" id="eng">ENG</span> 
+          <span class="button shifted" id="shift_eng">←</span> 
         </td>
         <td> 
           <span id="bracket_L">(</span> 
@@ -146,12 +150,12 @@
           <span id="bracket_R">)</span> 
         </td>
         <td> 
-          <span class="unshifted" id="comma">,</span> 
-          <span class="shifted" id="semicolon">;</span> 
+          <span class="button unshifted" id="comma">,</span> 
+          <span class="button shifted" id="semicolon">;</span> 
         </td>
         <td> 
-          <span class="unshifted" id="m_plus">M+</span> 
-          <span class="shifted" id="m_minus">M-</span> 
+          <span class="button unshifted" id="m_plus">M+</span> 
+          <span class="button shifted" id="m_minus">M-</span> 
         </td>
       </tr>
 
@@ -160,98 +164,98 @@
     <table class="bottom">
       <tr class="btmButtons">
         <td> 
-          <span class="unshifted" id="7">7</span> 
-          <span class="shifted" id="mega">M</span> 
+          <span class="button unshifted" id="7">7</span> 
+          <span class="button shifted" id="mega">M</span> 
         </td>
         <td> 
-          <span class="unshifted" id="8">8</span> 
-          <span class="shifted" id="giga">G</span> 
+          <span class="button unshifted" id="8">8</span> 
+          <span class="button shifted" id="giga">G</span> 
         </td>
         <td> 
-          <span class="unshifted" id="9">9</span> 
-          <span class="shifted" id="tera">T</span> 
+          <span class="button unshifted" id="9">9</span> 
+          <span class="button shifted" id="tera">T</span> 
         </td>
         <td id="delete">
-          <span class="unshifted" id="delete">DEL</span> 
-          <span class="shifted" id="insert">INS</span> 
+          <span class="button unshifted" id="delete">DEL</span> 
+          <span class="button shifted" id="insert">INS</span> 
         </td>
         <td id="allclear">
-          <span class="unshifted" id="allclear">AC</span> 
-          <span class="shifted" id="off">OFF</span> 
+          <span class="button unshifted" id="allclear">AC</span> 
+          <span class="button shifted" id="off">OFF</span> 
         </td>
       </tr>
       <tr class="btmButtons">
         <td> 
-          <span class="unshifted" id="4">4</span> 
-          <span class="shifted" id="micro">µ</span> 
+          <span class="button unshifted" id="4">4</span> 
+          <span class="button shifted" id="micro">µ</span> 
         </td>
         <td> 
-          <span class="unshifted" id="5">5</span> 
-          <span class="shifted" id="milli">m</span> 
+          <span class="button unshifted" id="5">5</span> 
+          <span class="button shifted" id="milli">m</span> 
         </td>
         <td> 
-          <span class="unshifted" id="6">6</span> 
-          <span class="shifted" id="kilo">k</span> 
+          <span class="button unshifted" id="6">6</span> 
+          <span class="button shifted" id="kilo">k</span> 
         </td>
         <td> 
-          <span class="unshifted" id="times">×</span> 
-          <span class="shifted" id="permutate">nPr</span> 
+          <span class="button unshifted" id="times">×</span> 
+          <span class="button shifted" id="permutate">nPr</span> 
         </td>
         <td> 
-          <span class="unshifted" id="divide">÷</span> 
-          <span class="shifted" id="choose">nCr</span> 
-        </td>
-      </tr>
-      <tr class="btmButtons">
-        <td> 
-          <span class="unshifted" id="1">1</span> 
-          <span class="shifted" id="femto">f</span> 
-        </td>
-        <td> 
-          <span class="unshifted" id="2">2</span> 
-          <span class="shifted" id="pico">p</span> 
-        </td>
-        <td> 
-          <span class="unshifted" id="3">3</span> 
-          <span class="shifted" id="nano">n</span> 
-        </td>
-        <td> 
-          <span class="unshifted" id="plus">+</span> 
-          <span class="shifted" id="polar">Pol(</span> 
-        </td>
-        <td> 
-          <span class="unshifted" id="minus">-</span> 
-          <span class="shifted" id="rectangular">Rec(</span> 
+          <span class="button unshifted" id="divide">÷</span> 
+          <span class="button shifted" id="choose">nCr</span> 
         </td>
       </tr>
       <tr class="btmButtons">
         <td> 
-          <span class="unshifted" id="0">0</span> 
-          <span class="shifted" id="round">Rnd</span> 
+          <span class="button unshifted" id="1">1</span> 
+          <span class="button shifted" id="femto">f</span> 
         </td>
         <td> 
-          <span class="unshifted" id="decimal">.</span> 
-          <span class="shifted" id="random_number">Ran#</span> 
+          <span class="button unshifted" id="2">2</span> 
+          <span class="button shifted" id="pico">p</span> 
         </td>
         <td> 
-          <span class="unshifted" id="EXP">EXP</span> 
-          <span class="shifted" id="pi"><i>π</i></span> 
+          <span class="button unshifted" id="3">3</span> 
+          <span class="button shifted" id="nano">n</span> 
         </td>
         <td> 
-          <span class="unshifted" id="ans">ANS</span> 
-          <span class="shifted" id="deg_rad_grad">DRG▶</span> 
+          <span class="button unshifted" id="plus">+</span> 
+          <span class="button shifted" id="polar">Pol(</span> 
+        </td>
+        <td> 
+          <span class="button unshifted" id="minus">-</span> 
+          <span class="button shifted" id="rectangular">Rec(</span> 
+        </td>
+      </tr>
+      <tr class="btmButtons">
+        <td> 
+          <span class="button unshifted" id="0">0</span> 
+          <span class="button shifted" id="round">Rnd</span> 
+        </td>
+        <td> 
+          <span class="button unshifted" id="decimal">.</span> 
+          <span class="button shifted" id="random_number">Ran#</span> 
+        </td>
+        <td> 
+          <span class="button unshifted" id="EXP">EXP</span> 
+          <span class="button shifted" id="pi"><i>π</i></span> 
+        </td>
+        <td> 
+          <span class="button unshifted" id="ans">ANS</span> 
+          <span class="button shifted" id="deg_rad_grad">DRG▶</span> 
           <!-- degree, radian, gradian (gradian = 1/100 of 90deg, 9/10 deg) -->
         </td>
         <td> 
-          <span class="unshifted" id="equals">=</span> 
-          <span class="shifted" id="percentage">%</span> 
+          <span class="button unshifted" id="equals" onclick="updateResult(this)">=</span> 
+          <span class="button shifted" id="percentage">%</span> 
         </td>
       </tr>
     </table> <!-- end of bottom table -->
 
   </div>
 
-  <script src="./script.js"></script>
+  <script src="./script.js" async defer></script>
 
 
   
