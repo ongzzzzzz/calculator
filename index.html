@@ -33,7 +33,7 @@
     <h1 style="text-align:center;">calcucumber</h1>
 
     <div class="display">
-      <div class="result">
+      <div id="result" class="result">
         hewwo
       </div>
     </div>
@@ -41,19 +41,15 @@
     <table class="top">
 
       <tr class="controlButtons">
-        <td> <span id="shift" onmouseup="shiftButtons()">SHIFT</span> </td>
-        <td> <span id="alpha">ALPHA</span> </td>
+        <td> <span class="button" id="shift" onmouseup="shiftButtons()">SHIFT</span> </td>
+        <td> <span class="button" id="alpha">ALPHA</span> </td>
 
         <td colspan="2" rowspan="2">
           
-          <span id="up" class="button directions">
-            ▲</span><br>
-          <span id="left" class="button directions">
-            ◀&nbsp;&nbsp;&nbsp;</span>
-          <span id="right" class="button directions">
-            &nbsp;&nbsp;&nbsp;▶</span><br>
-          <span id="down" class="button directions">
-            ▼</span>
+          <span id="up" class="button directions">▲</span><br>
+          <span id="left" class="button directions">◀&nbsp;&nbsp;&nbsp;</span>
+          <span id="right" class="button directions">&nbsp;&nbsp;&nbsp;▶</span><br>
+          <span id="down" class="button directions">▼</span>
           
         </td>
 
@@ -63,7 +59,7 @@
         </td>
 
         <td> 
-          <span id="power">PWR</span> 
+          <span class="button" id="power">PWR</span> 
         </td>
 
       </tr>
@@ -113,13 +109,13 @@
       </tr>
       <tr class="topButtons">
         <td> 
-          <span id="negate">(-)</span> 
+          <span class="button" id="negate">(-)</span> 
         </td>
         <td> 
-          <span id="sexagesimal">° ' "</span> 
+          <span class="button" id="sexagesimal">° ' "</span> 
         </td>
         <td> 
-          <span id="hyp">hyp</span> 
+          <span class="button" id="hyp">hyp</span> 
         </td>
         <td> 
           <span class="button unshifted" id="sin">sin</span> 
@@ -144,10 +140,10 @@
           <span class="button shifted" id="shift_eng">←</span> 
         </td>
         <td> 
-          <span id="bracket_L">(</span> 
+          <span class="button" id="bracket_L">(</span> 
         </td>
         <td> 
-          <span id="bracket_R">)</span> 
+          <span class="button" id="bracket_R">)</span> 
         </td>
         <td> 
           <span class="button unshifted" id="comma">,</span> 
@@ -164,15 +160,15 @@
     <table class="bottom">
       <tr class="btmButtons">
         <td> 
-          <span class="button unshifted" id="7">7</span> 
+          <span class="button unshifted number" id="7">7</span> 
           <span class="button shifted" id="mega">M</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="8">8</span> 
+          <span class="button unshifted number" id="8">8</span> 
           <span class="button shifted" id="giga">G</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="9">9</span> 
+          <span class="button unshifted number" id="9">9</span> 
           <span class="button shifted" id="tera">T</span> 
         </td>
         <td id="delete">
@@ -186,15 +182,15 @@
       </tr>
       <tr class="btmButtons">
         <td> 
-          <span class="button unshifted" id="4">4</span> 
+          <span class="button unshifted number" id="4">4</span> 
           <span class="button shifted" id="micro">µ</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="5">5</span> 
+          <span class="button unshifted number" id="5">5</span> 
           <span class="button shifted" id="milli">m</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="6">6</span> 
+          <span class="button unshifted number" id="6">6</span> 
           <span class="button shifted" id="kilo">k</span> 
         </td>
         <td> 
@@ -208,15 +204,15 @@
       </tr>
       <tr class="btmButtons">
         <td> 
-          <span class="button unshifted" id="1">1</span> 
+          <span class="button unshifted number" id="1">1</span> 
           <span class="button shifted" id="femto">f</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="2">2</span> 
+          <span class="button unshifted number" id="2">2</span> 
           <span class="button shifted" id="pico">p</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="3">3</span> 
+          <span class="button unshifted number" id="3">3</span> 
           <span class="button shifted" id="nano">n</span> 
         </td>
         <td> 
@@ -230,7 +226,7 @@
       </tr>
       <tr class="btmButtons">
         <td> 
-          <span class="button unshifted" id="0">0</span> 
+          <span class="button unshifted number" id="0">0</span> 
           <span class="button shifted" id="round">Rnd</span> 
         </td>
         <td> 
@@ -247,7 +243,7 @@
           <!-- degree, radian, gradian (gradian = 1/100 of 90deg, 9/10 deg) -->
         </td>
         <td> 
-          <span class="button unshifted" id="equals" onclick="updateResult(this)">=</span> 
+          <span class="button unshifted" id="equals">=</span> 
           <span class="button shifted" id="percentage">%</span> 
         </td>
       </tr>
@@ -268,6 +264,3 @@
 </body>
 
 </html>
-
-<!-- add shift and alpha buttons-->
-<!-- onclick box-shadow effect -->

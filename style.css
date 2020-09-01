@@ -58,6 +58,10 @@ html, body{
 }
 
 /* buttons */
+span:hover{
+  cursor: pointer;
+}
+
 table{
   border-spacing: 2vw;
 }

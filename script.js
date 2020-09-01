@@ -1,53 +1,61 @@
-// $(document).ready(() => {
-//   //toggle shift
-//   $("#shift").click(() => {
-//     if( $(".shifted").css("display") == "none"){
-//       $(".unshifted").hide(); $(".shifted").show();
-//     } else{
-//       $(".unshifted").show(); $(".shifted").hide();
-//     }
-//     console.log("toggled shift");
-//   });
-//   //render display
-//   $(".button").click(() => {
-//     var self = $(this);
-//     console.log( self.html() );
-//   });
-// });
 
+//get buttons
+const shifteds = document.getElementsByClassName("shifted");
+const unshifteds = document.getElementsByClassName("unshifted");
+
+//shift function, still buggy
 function shiftButtons(){
-  var shifteds = document.getElementsByClassName("shifted");
-  var unshifteds = document.getElementsByClassName("unshifted");
   for(var i = 0; i < shifteds.length; i++) {
     if(shifteds[i].style.display == "none"){
-      shifteds[i].setAttribute("style", "display: inline");
-      unshifteds[i].setAttribute("style", "display: none");
+      shifteds[i].style.display = "block";
+      unshifteds[i].style.display = "none";
     }else{
-      shifteds[i].setAttribute("style", "display: none");
-      unshifteds[i].setAttribute("style", "display: inline");
+      shifteds[i].style.display = "none";
+      unshifteds[i].style.display = "block";
     }
-    console.log("woohoo");
   }
 }
 
-function updateResult(element){
-  console.log(element.id);
+//reference object of all buttons
+const functionRefs = {};
+//get all buttons
+const buttons = document.querySelectorAll(".button");
+buttons.forEach(button => {
+  //attach event listener
+  AttachEvent(button, "click", UpdateResult);
+  functionRefs[button.innerHTML] = button.id;
+});
+console.log(functionRefs);
+
+//attaches functions to actions
+function AttachEvent(element, type, handler) {
+	if (element.addEventListener) element.addEventListener(type, handler, false);
+	else element.attachEvent("on"+type, handler);
 }
 
-var buttons = document.getElementsByClassName("button");
-for (var i = 0; i < buttons.length; i++) {
-  buttons.item(i).addEventListener("click", () => {
-    updateResult(this).bind(this);
-  });
+//get results div 
+const result = document.getElementById("result");
+//answer, rendered on the display
+var answer = "";
+
+function UpdateResult(e) {
+  result.innerHTML = HandleOperation(this);
+  
+  //if number, show on display
 }
-//this place cacat
-//maybe make a function called update result, then bind it to all of the buttons
 
-//have a variable called result
-//defaults to 0
-//when 
+function HandleOperation(e){
+  if(parseInt(e.innerHTML) >= 0){
+    answer += e.innerHTML;
+    return answer;
+  } else {
 
-
+    //get cilcked, append to string and send JSON request
+    //https://api.mathjs.org/
+    console.log(functionRefs[e.innerHTML]);
+    return "nah";
+  }
+}
 
 // register button clicks
 //display button clicks to display
