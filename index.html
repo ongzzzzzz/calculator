@@ -15,7 +15,7 @@
   <meta property="og:image" content="./abacus.png">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" type="image/png" sizes="120x120" href="./abacus.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="./icon.png">
 
   <link rel="stylesheet" href="./style.css">
 
@@ -23,6 +23,7 @@
 
   <script src='https://analytics.stacc.cc/api/script/csAaUCTlvRej'></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://unpkg.com/mathjs/dist/math.min.js"></script>
 
 </head>
 
@@ -87,7 +88,7 @@
           <span class="button shifted" id="fraction">d/c</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="square_root">√</span> 
+          <span class="button unshifted" id="sqrt">√</span> 
           <span class="button shifted" id="cube_root"><sup>3</sup>√</span> 
         </td>
         <td> 
@@ -99,7 +100,7 @@
           <span class="button shifted" id="nth_root"><sup>x</sup>√</span> 
         </td>
         <td> 
-          <span class="button unshifted" id="log">log</span> 
+          <span class="button unshifted" id="log10">log</span> 
           <span class="button shifted" id="base_10">10<sup>x</sup></span> 
         </td>
         <td> 
@@ -243,13 +244,14 @@
           <!-- degree, radian, gradian (gradian = 1/100 of 90deg, 9/10 deg) -->
         </td>
         <td> 
-          <span class="button unshifted" id="equals">=</span> 
+          <span class="button unshifted" id="equal">=</span> 
           <span class="button shifted" id="percentage">%</span> 
         </td>
       </tr>
     </table> <!-- end of bottom table -->
 
   </div>
+
 
   <script src="./script.js" async defer></script>
 

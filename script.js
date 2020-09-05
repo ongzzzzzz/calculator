@@ -15,7 +15,6 @@ function shiftButtons(){
     }
   }
 }
-
 //reference object of all buttons
 const functionRefs = {};
 //get all buttons
@@ -39,23 +38,23 @@ const result = document.getElementById("result");
 var answer = "";
 
 function UpdateResult(e) {
-  result.innerHTML = HandleOperation(this);
-  
-  //if number, show on display
+  result.innerHTML = HandleOperation(this);  
 }
 
 function HandleOperation(e){
-  if(parseInt(e.innerHTML) >= 0){
-    answer += e.innerHTML;
+  if(!isNaN(e.innerHTML) || e.innerHTML == "."){
+    //if number, show on display
+    answer += e.innerHTML; //string concatenation
     return answer;
   } else {
-
-    //get cilcked, append to string and send JSON request
-    //https://api.mathjs.org/
-    console.log(functionRefs[e.innerHTML]);
-    return "nah";
+    //not a number, log its name
+    var clickedFunction = e.id;
+    return (math[clickedFunction](result.innerHTML));
   }
 }
+
+//parse the expressions, eg 2*pi int
+//change all elements id so it follows https://api.mathjs.org
 
 // register button clicks
 //display button clicks to display
